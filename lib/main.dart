@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:locus/constants/colors.dart';
+import 'package:locus/features/home/presentation/views/home_view.dart';
 import 'package:locus/features/navbar/presentation/logic/nav_bar_cubit.dart';
 import 'package:locus/features/navbar/presentation/views/nav_bar.dart';
 import 'package:locus/features/onboarding/presentation/views/splash_screen.dart';
@@ -19,16 +20,16 @@ class MyApp extends StatelessWidget {
       designSize: const Size(360, 690),
       minTextAdapt: true,
       splitScreenMode: true,
-      builder: (_ , child){
+      builder: (_, child) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
           theme: ThemeData(
-            colorScheme: ColorScheme.fromSeed(seedColor: LocusColors.primaryColor),
+            colorScheme:
+                ColorScheme.fromSeed(seedColor: LocusColors.primaryColor),
             useMaterial3: true,
           ),
-          home: BlocProvider(
-            create: (context) => NavBarCubit(),
-              child: NavBar()),
+          home:
+              BlocProvider(create: (context) => NavBarCubit(), child: NavBar()),
         );
       },
     );
