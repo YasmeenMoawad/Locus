@@ -9,8 +9,10 @@ class Assets {
   static const String assetsImagesVrGlasses = 'assets/images/vr_glasses.svg';
   static const String fontsItaliana = 'assets/fonts/Italiana.ttf';
   static const String fontsJetBrainsMono = 'assets/fonts/JetBrainsMono.ttf';
+  static const String imagesAIIcon = 'assets/images/AI_icon.svg';
   static const String imagesBackground = 'assets/images/background.png';
   static const String imagesCalendar = 'assets/images/Calendar.svg';
+  static const String imagesChatbotIcon = 'assets/images/chatbot_icon.svg';
   static const String imagesJupiter = 'assets/images/jupiter.png';
   static const String imagesJupiterBg = 'assets/images/jupiter_bg.png';
   static const String imagesLevel1Bg = 'assets/images/level1_bg.png';
@@ -25,13 +27,16 @@ class Assets {
   static const String imagesPluto = 'assets/images/pluto.png';
   static const String imagesPlutoBg = 'assets/images/pluto_bg.png';
   static const String imagesRobotFace = 'assets/images/robot_face.svg';
+  static const String imagesRocket = 'assets/images/rocket.svg';
   static const String imagesSaturn = 'assets/images/saturn.png';
   static const String imagesSaturnBg = 'assets/images/saturn_bg.png';
+  static const String imagesSend = 'assets/images/send.svg';
   static const String imagesTelescope = 'assets/images/telescope.svg';
   static const String imagesUranus = 'assets/images/uranus.png';
   static const String imagesUranusBg = 'assets/images/uranus_bg.png';
   static const String imagesVenus = 'assets/images/venus.png';
   static const String imagesVenusBg = 'assets/images/venus_bg.png';
   static const String imagesVrGlasses = 'assets/images/vr_glasses.svg';
+  static const String videosVideobg = 'assets/videos/videobg.mp4';
 
 }
