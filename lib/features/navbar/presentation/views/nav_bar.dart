@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:locus/constants/colors.dart';
 import 'package:locus/core/utils/background/logic/background_cubit.dart';
+import 'package:locus/features/home/presentation/views/home_view.dart';
 import 'package:locus/features/navbar/presentation/logic/nav_bar_cubit.dart';
 import 'package:locus/features/navbar/presentation/views/nav_bar_screens.dart';
 import 'package:locus/features/navbar/presentation/views/widgets/nav_bar_icons.dart';
