@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:locus/core/widgets/appbar.dart';
+import 'package:locus/core/widgets/custom_drawer.dart';
 import 'package:locus/features/home/presentation/views/widgets/custom_drawer.dart';
 import 'package:locus/features/home/presentation/views/widgets/custom_search_field.dart';
 
@@ -22,24 +24,8 @@ class HomeView extends StatelessWidget {
         Scaffold(
           backgroundColor: Colors.transparent,
           key: scaffoldKey,
-          appBar: AppBar(
-            elevation: 0.0,
-            backgroundColor: Colors.transparent,
-            leading: IconButton(
-              onPressed: () {
-                scaffoldKey.currentState?.openDrawer();
-              },
-              icon: SvgPicture.asset('assets/images/Vector.svg'),
-            ),
-            actions: [
-              IconButton(
-                onPressed: () {},
-                icon:
-                    SvgPicture.asset('assets/images/clarity_notification.svg'),
-              )
-            ],
-          ),
-          drawer: const CustomDrawer(),
+          appBar: CustomizedAppBar(sKey: scaffoldKey, isNotification: true),
+          drawer: const CustomizedDrawer(),
           body: Padding(
             padding: const EdgeInsets.all(10),
             child: Column(

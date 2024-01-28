@@ -42,6 +42,7 @@ dependencies:
   video_player:
   buttons_tabbar:
   easy_search_bar:
+  table_calendar:
 
 dev_dependencies:
   flutter_test:
@@ -95,6 +96,9 @@ flutter:
         - asset: assets/fonts/JetBrainsMono.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
+    - family: JetBrains Mono
+      fonts:
+        - asset: assets/fonts/Poppins.ttf
   #   - family: Trajan Pro
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf
