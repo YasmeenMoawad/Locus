@@ -32,14 +32,14 @@ class NavBar extends StatelessWidget {
             backgroundColor: LocusColors.bgOfPlanetIcon,
             floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
             floatingActionButton: FloatingActionButton(
-              backgroundColor: LocusColors.bgOfPlanetIcon,
+              backgroundColor: Colors.transparent,
               onPressed: (){},
               elevation: 0,
               child: Image.asset(Assets.imagesUranus),
             ),
             bottomNavigationBar: BottomAppBar(
-              height: 65.h,
-              notchMargin: 6.h,
+              height: 60.h,
+              notchMargin: 9.h,
               color: const Color(0xFF1D1F24),
               shape: const CircularNotchedRectangle(),
               child: Row(

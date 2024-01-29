@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:locus/constants/colors.dart';
 
-class CustomText extends StatelessWidget {
-  CustomText({Key? key,
+class MonoText extends StatelessWidget {
+  MonoText({Key? key,
     required this.txt,
     required this.size,
     required this.weight}) :super(key: key);

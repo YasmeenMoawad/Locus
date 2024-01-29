@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:locus/constants/colors.dart';
-import 'package:locus/core/widgets/custom_text.dart';
+import 'package:locus/core/widgets/mono_text.dart';
 
 class QuesBoxes extends StatelessWidget {
   QuesBoxes({Key? key, required this.childText}) : super(key: key);
 
-  CustomText childText;
+  MonoText childText;
   @override
   Widget build(BuildContext context) {
     return Container(

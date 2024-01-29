@@ -1,19 +1,32 @@
 import 'package:flutter/material.dart';
-import 'package:locus/core/utils/background/views/background_view.dart';
+import 'package:locus/core/widgets/appbar.dart';
+import 'package:locus/core/widgets/custom_drawer.dart';
+import 'package:locus/core/widgets/img_bg.dart';
+import 'package:locus/features/calendar/presentation/views/widgets/calendar_box.dart';
 
 class CalendarView extends StatelessWidget {
   const CalendarView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.greenAccent,
-      body: Stack(
-        children: [
-          //Background(),
-
-        ],
-      ),
+    var scaffoldKey = GlobalKey<ScaffoldState>();
+    return Stack(
+      children: [
+        const ImgBG(),
+        Scaffold(
+          key: scaffoldKey,
+            backgroundColor: Colors.transparent,
+          appBar: CustomizedAppBar(sKey: scaffoldKey,
+              isNotification: false),
+          drawer: const CustomizedDrawer(),
+          body: ListView(
+            padding: const EdgeInsets.all(20),
+            children: const [
+              CalendarBox(),
+            ],
+          ),
+        ),
+      ],
     );
   }
 }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:locus/constants/colors.dart';
-import 'package:locus/core/widgets/custom_text.dart';
+import 'package:locus/core/widgets/mono_text.dart';
 
 class SenderMsgs extends StatelessWidget {
   SenderMsgs({Key? key}) : super(key: key);
@@ -22,7 +22,7 @@ class SenderMsgs extends StatelessWidget {
               bottomRight: Radius.zero
             )),
       ),
-      child: CustomText(txt: 'Generate to me photo about constellation.',
+      child: MonoText(txt: 'Generate to me photo about constellation.',
           size: 13.sp, weight: FontWeight.w500),
     );
   }

@@ -96,7 +96,7 @@ flutter:
         - asset: assets/fonts/JetBrainsMono.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
-    - family: JetBrains Mono
+    - family: Poppins
       fonts:
         - asset: assets/fonts/Poppins.ttf
   #   - family: Trajan Pro

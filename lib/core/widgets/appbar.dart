@@ -11,11 +11,14 @@ class CustomizedAppBar extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       elevation: 0.0,
       backgroundColor: Colors.transparent,
-      leading: IconButton(
-        onPressed: () {
-          sKey.currentState?.openDrawer();
-        },
-        icon: SvgPicture.asset('assets/images/Vector.svg'),
+      leading: Align(
+        alignment: Alignment(3.w, 3.h),
+        child: IconButton(
+          onPressed: () {
+            sKey.currentState?.openDrawer();
+          },
+          icon: SvgPicture.asset('assets/images/Vector.svg'),
+        ),
       ),
       actions: [
         isNotification ? IconButton(
