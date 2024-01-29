@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import '../profile_view.dart';
 import 'drawer_item.dart';
 import 'drawer_list_tile.dart';
 
@@ -71,7 +72,14 @@ class CustomDrawer extends StatelessWidget {
               title: 'Profile',
               subTitle1: 'Setting',
               subTitle12: 'My Planet',
-              onTap: () {},
+              onTap: () {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (context) {
+                    return const ProfileView();
+                  }),
+                );
+              },
               subTitle1onTap: () {},
               subTitle2onTap: () {},
             ),
