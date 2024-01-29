@@ -28,8 +28,10 @@ class MyApp extends StatelessWidget {
                 ColorScheme.fromSeed(seedColor: LocusColors.white),
             useMaterial3: true,
           ),
-          home:
-              BlocProvider(create: (context) => NavBarCubit(), child: NavBar()),
+          home: BlocProvider(
+            create: (context) => NavBarCubit(),
+              child: NavBar(),),
+          // home: const HomeView(),
         );
       },
     );
