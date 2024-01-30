@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:locus/constants/colors.dart';
 import 'package:locus/core/widgets/img_bg.dart';
 import 'package:locus/features/chatbot_and_AI_generator/presentation/views/widgets/custom_tabbar.dart';
 import 'package:locus/features/chatbot_and_AI_generator/presentation/views/widgets/custom_tabbar_screens.dart';
@@ -28,7 +29,7 @@ class _ChatbotAIViewBodyState extends State<ChatbotAIViewBody>
       child: Scaffold(
         body: Stack(
           children: [
-            ImgBG(),
+            const ImgBG(shadowColor: LocusColors.shadowOfBG),
             Padding(
               padding: const EdgeInsets.all(30.0),
               child: Column(

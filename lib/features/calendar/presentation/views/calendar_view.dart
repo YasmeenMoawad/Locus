@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:locus/constants/colors.dart';
 import 'package:locus/core/widgets/appbar.dart';
 import 'package:locus/core/widgets/custom_drawer.dart';
 import 'package:locus/core/widgets/img_bg.dart';
@@ -12,7 +13,7 @@ class CalendarView extends StatelessWidget {
     var scaffoldKey = GlobalKey<ScaffoldState>();
     return Stack(
       children: [
-        const ImgBG(),
+        const ImgBG(shadowColor: LocusColors.shadowOfBG),
         Scaffold(
           key: scaffoldKey,
             backgroundColor: Colors.transparent,

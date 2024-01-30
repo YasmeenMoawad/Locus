@@ -43,6 +43,7 @@ dependencies:
   buttons_tabbar:
   easy_search_bar:
   table_calendar:
+  loading_indicator:
 
 dev_dependencies:
   flutter_test:

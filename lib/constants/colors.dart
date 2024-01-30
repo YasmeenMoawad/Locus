@@ -9,5 +9,6 @@ class LocusColors {
   static const Color inactive = Color(0xFF676D75);
   static const Color active = Color(0xFF676D74);
   static const Color bgOfPlanetIcon = Color(0xff211913);
-
+  static const Color shadowOfBG = Color(0x4D000000);
+  static const Color shadowOfLoading = Color(0x73676D74);
 }
