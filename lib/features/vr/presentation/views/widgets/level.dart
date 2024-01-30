@@ -1,8 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:locus/core/widgets/mono_text.dart';
-import 'package:locus/generated/assets.dart';
 
 class Level extends StatelessWidget {
   const Level({Key? key,required this.numLevel, required this.imgLevel}) : super(key: key);
@@ -17,7 +15,7 @@ class Level extends StatelessWidget {
       child: Stack(
         children: [
           Image.asset(imgLevel, fit: BoxFit.fitWidth,),
-          Center(child: MonoText(txt: numLevel, size: 20.sp, weight: FontWeight.w700)),
+          Center(child: MonoText(txt: numLevel, size: 18.sp, weight: FontWeight.w700)),
         ],
       ),
     );

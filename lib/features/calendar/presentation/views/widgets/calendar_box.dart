@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:locus/constants/styles.dart';
+import 'package:locus/features/calendar/presentation/views/event_view.dart';
 import 'package:locus/generated/assets.dart';
 import 'package:table_calendar/table_calendar.dart';
 
@@ -56,6 +57,9 @@ class CalendarBox extends StatelessWidget {
                 borderRadius: BorderRadius.circular(15),
               )
           ),
+          onDaySelected: (selectedDay, focusedDay){
+            Navigator.of(context).push(MaterialPageRoute(builder: (context) => EventView()));
+          },
         ),
         Divider(
           color: const Color(0xFFE5E5E5),

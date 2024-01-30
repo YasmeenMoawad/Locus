@@ -16,12 +16,16 @@ class Assets {
   static const String imagesClarityNotification = 'assets/images/clarity_notification.svg';
   static const String imagesCommunityIcon = 'assets/images/community_icon.png';
   static const String imagesDocumentIcon = 'assets/images/document_icon.svg';
+  static const String imagesEventImg = 'assets/images/eventImg.png';
+  static const String imagesEventsIcon = 'assets/images/events_icon.png';
   static const String imagesHelpCircle = 'assets/images/help-circle.svg';
   static const String imagesJupiter = 'assets/images/jupiter.png';
   static const String imagesJupiterBg = 'assets/images/jupiter_bg.png';
   static const String imagesLevel1Bg = 'assets/images/level1_bg.png';
   static const String imagesLevel2Bg = 'assets/images/level2_bg.png';
   static const String imagesLevel3Bg = 'assets/images/level3_bg.png';
+  static const String imagesLocationIcon = 'assets/images/location_icon.png';
+  static const String imagesLogOutIcon = 'assets/images/log_out_icon.png';
   static const String imagesMars = 'assets/images/mars.png';
   static const String imagesMarsBg = 'assets/images/mars_bg.png';
   static const String imagesMercury = 'assets/images/mercury.png';
@@ -32,6 +36,8 @@ class Assets {
   static const String imagesNotebook = 'assets/images/notebook.svg';
   static const String imagesPluto = 'assets/images/pluto.png';
   static const String imagesPlutoBg = 'assets/images/pluto_bg.png';
+  static const String imagesProfileBackground = 'assets/images/profile_background.png';
+  static const String imagesProfileDefault = 'assets/images/profile_default.png';
   static const String imagesProfileImage = 'assets/images/profile_image.png';
   static const String imagesRating = 'assets/images/rating.svg';
   static const String imagesRobotFace = 'assets/images/robot_face.svg';
