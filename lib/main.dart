@@ -27,6 +27,7 @@ class MyApp extends StatelessWidget {
             colorScheme:
                 ColorScheme.fromSeed(seedColor: LocusColors.white),
             useMaterial3: true,
+            visualDensity: VisualDensity.adaptivePlatformDensity,
           ),
           home: BlocProvider(
             create: (context) => NavBarCubit(),

@@ -4,10 +4,13 @@ import 'package:locus/features/chatbot_and_AI_generator/presentation/views/chatb
 import 'package:locus/features/stars_classification/presentation/views/stars_view.dart';
 import 'package:locus/features/vr/presentation/views/vr_view.dart';
 
+import '../../../home/presentation/views/home_view.dart';
+
 class Screens {
   List<Widget> navScreens = [
     ChatbotAIViewBody(),
-    const CalendarView(),
+    // const CalendarView(),
+    const HomeView(),
     const StarsView(),
     const VRView(),
   ];

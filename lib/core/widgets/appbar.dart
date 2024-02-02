@@ -3,7 +3,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class CustomizedAppBar extends StatelessWidget implements PreferredSizeWidget {
-  CustomizedAppBar({Key? key, required this.sKey, required this.isNotification}) : super(key: key);
+  const CustomizedAppBar(
+      {super.key, required this.sKey, required this.isNotification});
+  @override
   Size get preferredSize => const Size.fromHeight(kToolbarHeight);
   final sKey, isNotification;
   @override
@@ -21,11 +23,15 @@ class CustomizedAppBar extends StatelessWidget implements PreferredSizeWidget {
         ),
       ),
       actions: [
-        isNotification ? IconButton(
-          onPressed: () {},
-          icon:
-          SvgPicture.asset('assets/images/clarity_notification.svg'),
-        ) : SizedBox(width: 1.w,),
+        isNotification
+            ? IconButton(
+                onPressed: () {},
+                icon:
+                    SvgPicture.asset('assets/images/clarity_notification.svg'),
+              )
+            : SizedBox(
+                width: 1.w,
+              ),
       ],
     );
   }
