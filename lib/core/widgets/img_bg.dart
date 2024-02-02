@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:locus/generated/assets.dart';
 
 class ImgBG extends StatelessWidget {
-  const ImgBG({Key? key, required this.shadowColor}) : super(key: key);
+  const ImgBG({super.key, required this.shadowColor});
 
   final Color shadowColor;
   @override
@@ -12,10 +12,13 @@ class ImgBG extends StatelessWidget {
         SizedBox(
             width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.height,
-            child: Image.asset(Assets.imagesBackground,fit: BoxFit.fill,)
-        ),
+            child: Image.asset(
+              Assets.imagesBackground,
+              fit: BoxFit.fill,
+            )),
         Container(
           color: shadowColor,
+          color: const Color(0x4D000000),
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
         )

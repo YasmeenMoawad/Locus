@@ -6,11 +6,17 @@ class CustomSearchField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextField(
-      style: const TextStyle(color: Colors.white),
-      decoration: InputDecoration(
+    return SizedBox(
+      height: 40,
+      child: TextField(
+        style: const TextStyle(
+          color: Colors.white,
+          height: 1,
+        ),
+        decoration: InputDecoration(
+          contentPadding: const EdgeInsets.symmetric(vertical: 0.0),
           prefixIcon: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
+            padding: const EdgeInsets.symmetric(horizontal: 15),
             child: SvgPicture.asset(
               'assets/images/search_icon.svg',
             ),
@@ -21,13 +27,14 @@ class CustomSearchField extends StatelessWidget {
             color: Color(0xFFD0D0D0),
             fontSize: 12,
             fontFamily: 'JetBrains Mono',
-            fontWeight: FontWeight.w400,
+            fontWeight: FontWeight.w300,
           ),
           filled: true,
           fillColor: const Color.fromARGB(166, 85, 85, 87),
           border: const OutlineInputBorder(
               borderRadius: BorderRadius.all(Radius.circular(8))),
-          contentPadding: const EdgeInsets.all(0)),
+        ),
+      ),
     );
   }
 }

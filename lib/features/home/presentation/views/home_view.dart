@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:locus/core/widgets/appbar.dart';
 import 'package:locus/core/widgets/custom_drawer.dart';
-import 'package:locus/features/home/presentation/views/widgets/custom_drawer.dart';
 import 'package:locus/features/home/presentation/views/widgets/custom_search_field.dart';
 
 import 'widgets/custom_news_item.dart';

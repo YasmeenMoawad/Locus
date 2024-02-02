@@ -20,8 +20,11 @@ class ProfileView extends StatelessWidget {
           appBar: AppBar(
             backgroundColor: Colors.transparent,
             foregroundColor: Colors.white,
-            leading: IconButton(
-                onPressed: () {}, icon: const Icon(Icons.arrow_back_ios)),
+            // leading: IconButton(
+            //     onPressed: () {
+
+            //     },
+            //     icon: const Icon(Icons.arrow_back_ios)),
           ),
           backgroundColor: Colors.transparent,
           body: Padding(

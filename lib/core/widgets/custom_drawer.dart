@@ -3,6 +3,10 @@ import 'package:flutter_svg/svg.dart';
 import 'package:locus/features/home/presentation/views/widgets/drawer_item.dart';
 import 'package:locus/features/home/presentation/views/widgets/drawer_list_tile.dart';
 
+import '../../features/home/presentation/views/community_view.dart';
+import '../../features/home/presentation/views/profile_view.dart';
+import '../../features/home/presentation/views/widgets/custom_image_profile.dart';
+
 class CustomizedDrawer extends StatelessWidget {
   const CustomizedDrawer({
     super.key,
@@ -19,18 +23,9 @@ class CustomizedDrawer extends StatelessWidget {
             // * user info
             Row(
               children: [
-                Container(
-                  width: 45,
-                  height: 45,
-                  decoration: ShapeDecoration(
-                    image: const DecorationImage(
-                      image: AssetImage('assets/images/profile_image.png'),
-                      fit: BoxFit.fill,
-                    ),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(50),
-                    ),
-                  ),
+                const CustomImageProfile(
+                 
+                  profileImage: AssetImage('assets/images/profile_image.png'),
                 ),
                 const SizedBox(width: 15),
                 Column(
@@ -67,11 +62,18 @@ class CustomizedDrawer extends StatelessWidget {
             ),
             DrawerItem(
               icon:
-              const Image(image: AssetImage('assets/images/user_icon.png')),
+                  const Image(image: AssetImage('assets/images/user_icon.png')),
               title: 'Profile',
               subTitle1: 'Setting',
               subTitle12: 'My Planet',
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) {
+                    return const ProfileView();
+                  }),
+                );
+              },
               subTitle1onTap: () {},
               subTitle2onTap: () {},
             ),
@@ -81,7 +83,12 @@ class CustomizedDrawer extends StatelessWidget {
               title: 'Community',
               subTitle1: 'Posts',
               subTitle12: 'Upload',
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const CommunityView()));
+              },
               subTitle1onTap: () {},
               subTitle2onTap: () {},
             ),
@@ -115,3 +122,4 @@ class CustomizedDrawer extends StatelessWidget {
     );
   }
 }
+

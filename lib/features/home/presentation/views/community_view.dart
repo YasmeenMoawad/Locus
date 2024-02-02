@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:locus/constants/colors.dart';
 import 'package:locus/core/widgets/img_bg.dart';
 import 'package:locus/features/home/presentation/views/widgets/custom_search_field.dart';
 
@@ -15,7 +14,7 @@ class CommunityView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        const ImgBG(shadowColor: LocusColors.shadowOfBG),
+        const ImgBG(shadowColor: shadowColor),
         Scaffold(
           backgroundColor: Colors.transparent,
           body: Column(
