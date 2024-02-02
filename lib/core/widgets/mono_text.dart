@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:locus/constants/colors.dart';
 
 class MonoText extends StatelessWidget {
-  MonoText({Key? key,
+  MonoText({super.key,
     required this.txt,
     required this.size,
-    required this.weight}) :super(key: key);
+    required this.weight});
 
   String txt;
   double? size;

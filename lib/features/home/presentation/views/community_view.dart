@@ -14,7 +14,7 @@ class CommunityView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        const ImgBG(),
+        const ImgBG(shadowColor: shadowColor),
         Scaffold(
           backgroundColor: Colors.transparent,
           body: Column(
