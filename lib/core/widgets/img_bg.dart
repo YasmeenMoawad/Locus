@@ -18,7 +18,6 @@ class ImgBG extends StatelessWidget {
             )),
         Container(
           color: shadowColor,
-          color: const Color(0x4D000000),
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
         )

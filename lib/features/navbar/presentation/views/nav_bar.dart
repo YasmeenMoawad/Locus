@@ -6,17 +6,14 @@ import 'package:locus/core/utils/background/logic/background_cubit.dart';
 import 'package:locus/features/home/presentation/views/home_view.dart';
 import 'package:locus/features/navbar/presentation/logic/nav_bar_cubit.dart';
 import 'package:locus/features/navbar/presentation/views/nav_bar_screens.dart';
-import 'package:locus/features/navbar/presentation/views/widgets/nav_bar_icons.dart';
+import 'package:locus/features/navbar/presentation/views/widgets/nav_bar_icon.dart';
 import 'package:locus/generated/assets.dart';
 
 class NavBar extends StatelessWidget {
   NavBar({Key? key}) : super(key: key);
 
-  final PageController _myPage = PageController(initialPage: 0);
-
   @override
   Widget build(BuildContext context) {
-    NavBarCubit buttonPressed = BlocProvider.of<NavBarCubit>(context, listen: false);
     return MultiBlocProvider(
       providers: [
         BlocProvider(
@@ -28,6 +25,10 @@ class NavBar extends StatelessWidget {
       ],
       child: BlocBuilder<NavBarCubit, NavBarState>(
         builder: (context, state) {
+          int index = BlocProvider.of<NavBarCubit>(context).index;
+          void onChangedTab (int index) {
+            BlocProvider.of<NavBarCubit>(context).onChangedTab(index);
+          }
           return Scaffold(
             backgroundColor: LocusColors.bgOfPlanetIcon,
             floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
@@ -42,25 +43,9 @@ class NavBar extends StatelessWidget {
               notchMargin: 9.h,
               color: const Color(0xFF1D1F24),
               shape: const CircularNotchedRectangle(),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  NavBarIcons(index: 0, myPage: _myPage),
-                  NavBarIcons(index: 1, myPage: _myPage),
-                  SizedBox(width: 38.w,),
-                  NavBarIcons(index: 2, myPage: _myPage),
-                  NavBarIcons(index: 3, myPage: _myPage),
-               ],
-              ),
+              child: NavBarIcon(index: index, onChangedTab: onChangedTab),
             ),
-            body: PageView(
-              controller: _myPage,
-              onPageChanged: (int) {
-                print('Page Changes to index $int');
-              },
-              physics: const NeverScrollableScrollPhysics(),
-              children: Screens().navScreens,
-            ),
+            body: Screens().navScreens[BlocProvider.of<NavBarCubit>(context).index],
           );
         },
       ),

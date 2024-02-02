@@ -5,6 +5,9 @@ class NavBarState {}
 
 class ButtonInitial extends NavBarState {}
 
-class ButtonPressed extends NavBarState {}
+class ButtonPressed extends NavBarState {
+  int index;
+  ButtonPressed(this.index);
+}
 
 

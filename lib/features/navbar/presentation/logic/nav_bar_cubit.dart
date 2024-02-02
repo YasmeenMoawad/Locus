@@ -4,18 +4,10 @@ part 'nav_bar_state.dart';
 
 class NavBarCubit extends Cubit<NavBarState> {
   NavBarCubit() : super(NavBarState());
-  int currentIndex = 0;
-  bool _isButtonPressed = false;
+  int index = 0;
 
-  bool get isButtonPressed => _isButtonPressed;
-
-  void buttonState() {
-    _isButtonPressed = !_isButtonPressed;
-    emit(ButtonPressed());
-  }
-
-  void select(index) {
-    currentIndex = index;
-    emit(NavBarState());
+  void onChangedTab(int index) {
+      this.index = index;
+      emit(ButtonPressed(this.index));
   }
 }

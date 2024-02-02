@@ -7,6 +7,7 @@ class Assets {
   static const String fontsItaliana = 'assets/fonts/Italiana.ttf';
   static const String fontsJetBrainsMono = 'assets/fonts/JetBrainsMono.ttf';
   static const String fontsPoppins = 'assets/fonts/Poppins.ttf';
+  static const String fontsSpikeSpeakStraight = 'assets/fonts/SpikeSpeakStraight.otf';
   static const String imagesAIIcon = 'assets/images/AI_icon.svg';
   static const String imagesBackground = 'assets/images/background.png';
   static const String imagesCalendar = 'assets/images/Calendar.svg';
