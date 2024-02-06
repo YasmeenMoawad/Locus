@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:loading_indicator/loading_indicator.dart';
 import 'package:locus/constants/colors.dart';
 import 'package:locus/features/chatbot_and_AI_generator/presentation/views/widgets/dots.dart';
 
@@ -22,16 +23,21 @@ class LocusMsgs extends StatelessWidget {
           ),
         ),
       ),
-      child: const Row(
+      child: Row(
         mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Dots(),
-          SizedBox(width: 5),
-          Dots(),
-          SizedBox(width: 5),
-          Dots(),
+          SizedBox(
+            width: 30.w, height: 30.h,
+            child: const LoadingIndicator(
+              indicatorType: Indicator.ballPulseSync,
+              colors: [LocusColors.white],
+              strokeWidth: 0.8,
+              backgroundColor: Colors.transparent,
+              pause: true,
+            ),
+          ),
         ],
       ),
     );
