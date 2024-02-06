@@ -33,22 +33,31 @@ class NavBarIcon extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(width: 38.w,),
+        //SizedBox(width: 38.w,),
         buildTabItem(
           index: 2,
           icon: SvgPicture.asset(Assets.imagesTelescope,
             colorFilter: ColorFilter.mode(
-              this.index == 2 ? LocusColors.white
-                  : LocusColors.grey,
+              Colors.transparent,
               BlendMode.srcIn,
             ),
           ),
         ),
         buildTabItem(
           index: 3,
-          icon: SvgPicture.asset(Assets.imagesVrGlasses,
+          icon: SvgPicture.asset(Assets.imagesTelescope,
             colorFilter: ColorFilter.mode(
               this.index == 3 ? LocusColors.white
+                  : LocusColors.grey,
+              BlendMode.srcIn,
+            ),
+          ),
+        ),
+        buildTabItem(
+          index: 4,
+          icon: SvgPicture.asset(Assets.imagesVrGlasses,
+            colorFilter: ColorFilter.mode(
+              this.index == 4 ? LocusColors.white
                   : LocusColors.grey,
               BlendMode.srcIn,
             ),
@@ -64,6 +73,7 @@ class NavBarIcon extends StatelessWidget {
     return IconButton(
       icon: icon,
       onPressed: () => onChangedTab(index),
+      highlightColor: Colors.transparent,
     );
   }
 }

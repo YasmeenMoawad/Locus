@@ -9,7 +9,7 @@ import '../../../home/presentation/views/home_view.dart';
 class Screens {
   List<Widget> navScreens = [
     ChatbotAIViewBody(),
-    // const CalendarView(),
+    const CalendarView(),
     const HomeView(),
     const StarsView(),
     const VRView(),

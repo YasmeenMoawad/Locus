@@ -34,7 +34,7 @@ class NavBar extends StatelessWidget {
             floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
             floatingActionButton: FloatingActionButton(
               backgroundColor: Colors.transparent,
-              onPressed: (){},
+              onPressed: ()=> onChangedTab(2),
               elevation: 0,
               child: Image.asset(Assets.imagesUranus),
             ),
