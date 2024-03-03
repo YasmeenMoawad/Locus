@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:locus/constants/colors.dart';
 import 'package:locus/features/navbar/presentation/logic/nav_bar_cubit.dart';
 import 'package:locus/features/navbar/presentation/views/nav_bar.dart';
+import 'package:locus/features/splash/presentation/views/splash.dart';
 
 void main() {
   runApp(const MyApp());
@@ -27,9 +28,7 @@ class MyApp extends StatelessWidget {
             useMaterial3: true,
             visualDensity: VisualDensity.adaptivePlatformDensity,
           ),
-          home: BlocProvider(
-            create: (context) => NavBarCubit(),
-              child: NavBar(),),
+          home: const SplashScreen()
           // home: const HomeView(),
         );
       },
