@@ -22,14 +22,14 @@ class MyApp extends StatelessWidget {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
           theme: ThemeData(
-            colorScheme:
-                ColorScheme.fromSeed(seedColor: LocusColors.white),
+            colorScheme: ColorScheme.fromSeed(seedColor: LocusColors.white),
             useMaterial3: true,
             visualDensity: VisualDensity.adaptivePlatformDensity,
           ),
           home: BlocProvider(
             create: (context) => NavBarCubit(),
-              child: NavBar(),),
+            child: NavBar(),
+          ),
           // home: const HomeView(),
         );
       },

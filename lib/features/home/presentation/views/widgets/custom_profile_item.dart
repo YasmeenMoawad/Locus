@@ -32,15 +32,13 @@ class CustomProfileItem extends StatelessWidget {
             ),
             SizedBox(
               width: MediaQuery.of(context).size.width / 1.6,
-              child: Expanded(
-                child: Text(
-                  title,
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 13.w,
-                    fontFamily: 'JetBrains Mono',
-                    fontWeight: FontWeight.w500,
-                  ),
+              child: Text(
+                title,
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 13.w,
+                  fontFamily: 'JetBrains Mono',
+                  fontWeight: FontWeight.w500,
                 ),
               ),
             ),

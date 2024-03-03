@@ -1,13 +1,37 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:locus/core/widgets/appbar.dart';
 import 'package:locus/core/widgets/custom_drawer.dart';
+import 'package:locus/features/home/data/models/model1.dart';
+import 'package:locus/features/home/presentation/logic/news_service.dart';
 import 'package:locus/features/home/presentation/views/widgets/custom_search_field.dart';
 
 import 'widgets/custom_news_item.dart';
 
-class HomeView extends StatelessWidget {
+class HomeView extends StatefulWidget {
   const HomeView({super.key});
+
+  @override
+  State<HomeView> createState() => _HomeViewState();
+}
+
+class _HomeViewState extends State<HomeView> {
+  List<NewsModel> newsList = [];
+  bool isLoading = true;
+  @override
+  void initState() {
+    super.initState();
+    getNews();
+  }
+
+  Future<void> getNews() async {
+    newsList = await NewsService().getNews();
+    isLoading = false;
+    setState(() {
+      log(newsList.toString());
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +42,7 @@ class HomeView extends StatelessWidget {
           'assets/images/background.png',
           height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
-          fit: BoxFit.cover,
+          fit: BoxFit.fill,
         ),
         Scaffold(
           backgroundColor: Colors.transparent,
@@ -48,18 +72,15 @@ class HomeView extends StatelessWidget {
                 ),
                 const SizedBox(height: 8),
                 Expanded(
-                  child: ListView(
-                    children: const [
-                      NewsItem(),
-                      NewsItem(),
-                      NewsItem(),
-                      NewsItem(),
-                      NewsItem(),
-                      NewsItem(),
-                      NewsItem(),
-                      NewsItem(),
-                    ],
-                  ),
+                  child: isLoading
+                      ? const Center(child: CircularProgressIndicator())
+                      : ListView.builder(
+                          itemCount: newsList.length,
+                          itemBuilder: (context, index) {
+                            return NewsItem(
+                              newsModel: newsList[index],
+                            );
+                          }),
                 ),
               ],
             ),

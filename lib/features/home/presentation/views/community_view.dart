@@ -55,6 +55,14 @@ class CommunityView extends StatelessWidget {
               ),
             ],
           ),
+          floatingActionButton: FloatingActionButton(
+              backgroundColor: Colors.black54,
+              shape: const CircleBorder(),
+              onPressed: () {},
+              child: const Icon(
+                Icons.edit,
+                color: Colors.white,
+              )),
         )
       ],
     );

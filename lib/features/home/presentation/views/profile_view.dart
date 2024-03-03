@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:locus/constants/colors.dart';
+import 'package:locus/core/widgets/img_bg.dart';
 import 'package:locus/features/home/presentation/views/widgets/custom_profile_avatar.dart';
 import 'widgets/custom_profile_item.dart';
 
@@ -10,25 +12,15 @@ class ProfileView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Image(
-          image: const AssetImage('assets/images/profile_background.png'),
-          width: MediaQuery.of(context).size.width,
-          height: MediaQuery.of(context).size.height,
-          fit: BoxFit.fill,
-        ),
+        const ImgBG(shadowColor: LocusColors.shadowOfBG),
         Scaffold(
           appBar: AppBar(
             backgroundColor: Colors.transparent,
             foregroundColor: Colors.white,
-            // leading: IconButton(
-            //     onPressed: () {
-
-            //     },
-            //     icon: const Icon(Icons.arrow_back_ios)),
           ),
           backgroundColor: Colors.transparent,
           body: Padding(
-            padding: const EdgeInsets.all(10),
+            padding: EdgeInsets.all(10.w),
             child: Column(
               children: [
                 SizedBox(height: 40.h),
