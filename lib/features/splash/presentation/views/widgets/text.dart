@@ -15,7 +15,7 @@ class AppNameTextWidget extends StatelessWidget {
             const Text('L',style: TextStyle(
                 fontFamily: 'Spike Speak Straight',
                 fontSize: 48,fontWeight: FontWeight.w400),),
-            Image.asset('assets/images/saturn.png',scale: 2,),
+            Image.asset('assets/images/satellite.png',scale: 3,),
             const Text('CUS',style: TextStyle(
                 fontFamily: 'Spike Speak Straight',
                 fontSize: 48,fontWeight: FontWeight.w400),),

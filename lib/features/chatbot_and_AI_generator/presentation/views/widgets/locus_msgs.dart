@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:loading_indicator/loading_indicator.dart';
 import 'package:locus/constants/colors.dart';
-import 'package:locus/features/chatbot_and_AI_generator/presentation/views/widgets/dots.dart';
 
 class LocusMsgs extends StatelessWidget {
   const LocusMsgs({Key? key}) : super(key: key);

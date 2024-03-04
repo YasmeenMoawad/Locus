@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:locus/features/navbar/presentation/views/nav_bar.dart';
 import 'package:locus/features/onboarding/presentation/views/widgets/background.dart';
 import 'package:locus/features/planets/presentation/views/planet.dart';
 import '../../data/models/content_model.dart';
@@ -87,7 +88,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                 Navigator.pushReplacement(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (_) => const MyPlanetScreen(),
+                                    builder: (_) =>  NavBar(),
                                   ),
                                 );
                               }
