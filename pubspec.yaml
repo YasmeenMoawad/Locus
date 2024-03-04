@@ -130,7 +130,8 @@ flutter:
     - family: Spike Speak Straight
       fonts:
         - asset: assets/fonts/SpikeSpeakStraight.otf
-        - asset: assets/fonts/JosefinSans-Italic-VariableFont_wght.ttf
+        - asset: assets/fonts/SpikeSpeakStraight.ttf
+  #      - asset: assets/fonts/JosefinSans-Italic-VariableFont_wght.ttf
 
   #   - family: Trajan Pro
   #     fonts:

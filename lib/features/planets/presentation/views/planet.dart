@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:locus/constants/colors.dart';
 import 'package:locus/features/planets/presentation/views/planet_details.dart';
 import 'package:locus/features/planets/presentation/views/widgets/back.dart';
 import '../../data/models/details.dart';
@@ -66,10 +67,10 @@ class _MyPlanetScreenState extends State<MyPlanetScreen>
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
              Text(_Currentplanet.title,style: const TextStyle(
-              fontFamily: 'SpikeSpeakStraight.ttf',
+              fontFamily: 'Spike Speak Straight',
               fontWeight: FontWeight.w400,
               fontSize: 32,
-            ),),
+             ),),
             SizedBox(
               height: size.width,
               child: ListView.builder(
