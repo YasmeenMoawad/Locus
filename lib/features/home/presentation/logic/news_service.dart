@@ -19,11 +19,11 @@ class NewsService {
       newsList.add(newsModel);
     }
 
-    return newsList;
-    // if (response.statusCode == 200) {
-    //   return newsList;
-    // } else {
-    //   throw Exception('Failed to load news');
-    // }
+    
+    if (response.statusCode == 200) {
+      return newsList;
+    } else {
+      throw Exception('Failed to load news');
+    }
   }
 }
