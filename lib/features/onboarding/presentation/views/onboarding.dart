@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:locus/features/navbar/presentation/views/nav_bar.dart';
+import 'package:locus/features/login/presentation/views/get_started.dart';
 import 'package:locus/features/onboarding/presentation/views/widgets/background.dart';
 import '../../data/models/content_model.dart';
 
@@ -62,7 +62,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                           contents[i].title,
                           style: const TextStyle(
                             color: Colors.white,
-                            fontFamily: 'JetBrains Mono',
+                            fontFamily: 'Spike Speak Straight',
                             fontSize: 36,
                             fontWeight: FontWeight.bold,
                           ),
@@ -72,7 +72,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                           contents[i].discription,
                           textAlign: TextAlign.center,
                           style: const TextStyle(
-                            fontFamily: 'JetBrains Mono',
+                            fontFamily: 'JosefinSans-Regular',
                             fontSize: 14,
                             color: Colors.white,
                           ),
@@ -87,7 +87,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                 Navigator.pushReplacement(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (_) =>  NavBar(),
+                                    builder: (_) =>   GetStartedScreen(),
                                   ),
                                 );
                               }
@@ -102,7 +102,12 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                               borderRadius: BorderRadius.circular(5),
                             ),
                             child: Text(
-                                currentIndex == contents.length - 1 ? "Continue" : "Next"),
+                                currentIndex == contents.length - 1 ? "Continue" : "Next",
+                                style: const TextStyle(
+                                  fontSize: 16,
+                                  fontFamily: 'JosefinSans-Bold',
+                                  color: Colors.white,
+                                ),),
                           ),
                         ),
                         const SizedBox(height: 15),

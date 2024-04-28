@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:locus/constants/colors.dart';
 
+// ignore: must_be_immutable
 class MonoText extends StatelessWidget {
   MonoText({super.key,
     required this.txt,

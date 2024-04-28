@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:locus/constants/colors.dart';
 import 'package:locus/features/planets/presentation/views/planet_details.dart';
-import 'package:locus/features/planets/presentation/views/widgets/back.dart';
 import '../../data/models/details.dart';
 
 class MyPlanetScreen extends StatefulWidget {
-  const MyPlanetScreen({super.key,});
-
+  const MyPlanetScreen({super.key});
 
   @override
   State<MyPlanetScreen> createState() => _MyPlanetScreenState();
@@ -53,24 +50,39 @@ class _MyPlanetScreenState extends State<MyPlanetScreen>
 
   Stack _buildScreen() {
     final Size size = MediaQuery.of(context).size;
-    final Planet _Currentplanet = planetlist[_currentIndex];
+    final Planet _currentplanet = planetlist[_currentIndex];
     return Stack(
       alignment: Alignment.center,
       children: [
-        BgImage(
+        /* BgImage(
           currentIndex: _currentIndex,
-          planet: _Currentplanet,
+          planet: _currentplanet,
           pageOffset: _currentOffset,
+        ),*/
+        Container(
+          decoration: const BoxDecoration(
+            image: DecorationImage(
+                fit: BoxFit.cover,
+                image: AssetImage(
+                  'assets/images/background.png',
+
+                  // widget.planets.background,
+                )),
+          ),
         ),
         Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-             Text(_Currentplanet.title,style: const TextStyle(
-              fontFamily: 'Spike Speak Straight',
-              fontWeight: FontWeight.w400,
-              fontSize: 32,
-             ),),
+
+            Text(
+              '${_currentplanet.name}',
+              style: const TextStyle(
+                fontFamily: 'Spike Speak Straight',
+                fontSize: 32,
+                color: Colors.white,
+              ),
+            ),
             SizedBox(
               height: size.width,
               child: ListView.builder(
@@ -84,7 +96,9 @@ class _MyPlanetScreenState extends State<MyPlanetScreen>
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) =>  PlanetDetail(planets: planetlist[index],)));
+                              builder: (context) => PlanetDetail(
+                                    planets: planetlist[index],
+                                  )));
                     },
                     child: Image.asset(
                       planetlist[index % planetlist.length].image,

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:locus/constants/colors.dart';
 import 'package:locus/features/planets/data/models/details.dart';
-import 'package:locus/features/planets/presentation/views/planet.dart';
+import 'package:locus/features/planets/presentation/views/widgets/aPPbar_details.dart';
 import 'package:locus/features/planets/presentation/views/widgets/customdiscription.dart';
 class PlanetDetail extends StatefulWidget {
   const PlanetDetail({
@@ -31,86 +30,64 @@ class _PlanetDetailState extends State<PlanetDetail> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        leading: IconButton(
-          onPressed: () {
-            Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => const MyPlanetScreen()));
-          },
-          icon: const Icon(Icons.arrow_back_ios),
-        ),
-      ),
-      body: SingleChildScrollView(
-        controller: _controller,
-        child: Padding(
-          padding: const EdgeInsets.all(16.0),
-
-          child: Stack(
+    return SafeArea(
+      child: Scaffold(
+        body: ListView(
+          controller: _controller,
+          children: [Column(
             children: [
-              Container(
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                      fit: BoxFit.cover,
-                      image: AssetImage(
-                        widget.planets.background,
-                      )),
-                ),
-              ),
-              Column(
+              Stack(
                 children: [
-                  Image.asset(
-                    widget.planets.image,
-                    scale: 5,
-                  ),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  Text(
-                    widget.planets.title,
-                    style: const TextStyle(
-                        fontSize: 20,
-                        fontFamily: 'JetBrains Mono',
-                        fontWeight: FontWeight.bold),
-                  ),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  CustomDiscription(
-                    widget: widget,
-                    text: widget.planets.discription,
-                  ),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  
-                  CustomDiscription(
-                    widget: widget,
-                    text: widget.planets.discription1,
-                  ),
+                  Image.asset(widget.planets.background, fit: BoxFit.cover),
+
+                  //appBar
+                  const APPBarDetails(),
 
                   const SizedBox(
-                    height: 10,
+                    height: 20,
                   ),
-                  CustomDiscription(
-                    widget: widget,
-                    text: widget.planets.discription2,
-                  ),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  CustomDiscription(
-                    widget: widget,
-                    text: widget.planets.discription3,
-                  ),
+                  Column(
+                    children: [
+                      Image.asset(
+                        widget.planets.image,
+                        scale: 6,
+                      ),
+                      Text(
+                        widget.planets.title,
+                        style: const TextStyle(
+                            fontSize: 20,
+                            fontFamily: 'JosefinSans-Bold',
+                            fontWeight: FontWeight.w900,
+                            color: Colors.white),
+                      ),
+
+                      CustomDiscription(
+                        widget: widget,
+                        text: widget.planets.discription,
+                      ),
+                      CustomDiscription(
+                        widget: widget,
+                        text: widget.planets.discription1,
+                      ),
+
+                      CustomDiscription(
+                        widget: widget,
+                        text: widget.planets.discription2,
+                      ),
+
+                      CustomDiscription(
+                        widget: widget,
+                        text: widget.planets.discription3,
+                      )
+                    ],
+                  )
                 ],
-              )
+              ),
             ],
-          ),
+          ),]
         ),
       ),
     );
   }
 }
+

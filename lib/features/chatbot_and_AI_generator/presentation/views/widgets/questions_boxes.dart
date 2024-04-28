@@ -3,8 +3,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:locus/constants/colors.dart';
 import 'package:locus/core/widgets/mono_text.dart';
 
+// ignore: must_be_immutable
 class QuesBoxes extends StatelessWidget {
-  QuesBoxes({Key? key, required this.childText}) : super(key: key);
+  QuesBoxes({super.key, required this.childText});
 
   MonoText childText;
   @override
