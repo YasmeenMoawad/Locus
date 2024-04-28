@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:locus/features/login/presentation/logic/GetStartedCubit/get_started_cubit.dart';
-import 'package:locus/features/login/presentation/views/login.dart';
+import 'package:locus/features/login/presentation/views/welcome.dart';
 import 'package:locus/features/login/presentation/views/widgets/Nav.dart';
 import 'package:locus/features/login/presentation/views/widgets/auth_text_button_widget.dart';
 import 'package:locus/features/login/presentation/views/widgets/auth_text_field_widget.dart';
 import 'package:locus/features/login/presentation/views/widgets/auth_text_widget.dart';
 
 // ignore: must_be_immutable
-class SignUpScreen extends StatelessWidget {
+class GetStartedScreen extends StatelessWidget {
   GlobalKey formState = GlobalKey();
   TextEditingController name = TextEditingController();
   TextEditingController email = TextEditingController();
   TextEditingController password = TextEditingController();
   TextEditingController repassword = TextEditingController();
 
-  SignUpScreen({super.key});
+  GetStartedScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -169,7 +169,7 @@ class SignUpScreen extends StatelessWidget {
                                       onPressed: () {
                                         navScreen(
                                             context: context,
-                                            NextScreen: LoginScreen());
+                                            NextScreen: WelcomeScreen());
                                       },
                                       text: 'Login',
                                       color: const Color(0xff2D3380),

@@ -12,6 +12,7 @@ class GetStartedCubit extends Cubit<GetStartedState> {
   GetStartedCubit() : super(GetStartedInitial());
   static GetStartedCubit get(context) => BlocProvider.of(context);
 
+  // ignore: non_constant_identifier_names
   Register({
     name,
     email,
@@ -46,6 +47,7 @@ class GetStartedCubit extends Cubit<GetStartedState> {
               builder: (context) =>
                VerificationScreen()));
 
+    // ignore: invalid_return_type_for_catch_error
     }).catchError(onError);
   }
 

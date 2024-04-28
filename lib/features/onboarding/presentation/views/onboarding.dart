@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:locus/features/login/presentation/views/sign_up.dart';
+import 'package:locus/features/login/presentation/views/get_started.dart';
 import 'package:locus/features/onboarding/presentation/views/widgets/background.dart';
 import '../../data/models/content_model.dart';
 
@@ -87,7 +87,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                 Navigator.pushReplacement(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (_) =>   SignUpScreen(),
+                                    builder: (_) =>   GetStartedScreen(),
                                   ),
                                 );
                               }

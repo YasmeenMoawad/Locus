@@ -4,7 +4,6 @@ import 'package:fluttertoast/fluttertoast.dart';
 
 import '../../../data/Cache_Helper/CacheHelper.dart';
 import '../../../data/Dio/Dio_File.dart';
-import '../../views/verification.dart';
 import '../../views/widgets/MyPlanetScreen.dart';
 
 part 'welcome_state.dart';
@@ -12,6 +11,7 @@ part 'welcome_state.dart';
 class WelcomeCubit extends Cubit<WelcomeState> {
   WelcomeCubit() : super(WelcomeInitial());
   static WelcomeCubit get(context) => BlocProvider.of(context);
+  // ignore: non_constant_identifier_names
   Login({
     email,
     password,

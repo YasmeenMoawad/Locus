@@ -30,7 +30,7 @@ environment:
 dependencies:
   buttons_tabbar: null
   cupertino_icons: ^1.0.2
-  dio: ^5.4.1
+  dio:
   easy_search_bar: null
   flutter:
     sdk: flutter
@@ -38,10 +38,10 @@ dependencies:
   flutter_gen: null
   flutter_screenutil: null
   flutter_svg: null
-  fluttertoast: ^8.2.5
+  fluttertoast:
   loading_indicator: null
-  pinput: ^4.0.0
-  shared_preferences: ^2.2.3
+  pinput:
+  shared_preferences:
   shimmer: null
   table_calendar: null
   video_player: null
