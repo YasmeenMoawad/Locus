@@ -12,6 +12,7 @@ class WelcomeScreen extends StatelessWidget {
   var formState = GlobalKey();
   TextEditingController passControll= TextEditingController();
   TextEditingController emailControll= TextEditingController();
+  bool isvisibiliy=false;
 
   WelcomeScreen({super.key});
   @override

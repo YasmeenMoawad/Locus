@@ -47,8 +47,9 @@ class GetStartedCubit extends Cubit<GetStartedState> {
               builder: (context) =>
                VerificationScreen()));
 
-    // ignore: invalid_return_type_for_catch_error
-    }).catchError(onError);
+    }).catchError((error){
+      emit(GetStartedError());
+    });
   }
 
 

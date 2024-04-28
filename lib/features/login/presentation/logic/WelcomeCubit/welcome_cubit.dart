@@ -41,7 +41,7 @@ class WelcomeCubit extends Cubit<WelcomeState> {
           context,
           MaterialPageRoute(
               builder: (context) =>
-                  MyPlanetScreen()));
+                  const MyPlanetScreen()));
 
     }).catchError((error){
       emit(WelcomeError());
