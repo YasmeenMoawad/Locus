@@ -1,16 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:locus/features/login/presentation/logic/WelcomeCubit/welcome_cubit.dart';
-import 'package:locus/features/login/presentation/views/get_started.dart';
+import 'package:locus/features/login/presentation/views/sign_up.dart';
 import 'package:locus/features/login/presentation/views/widgets/Nav.dart';
 import 'package:locus/features/login/presentation/views/widgets/auth_text_button_widget.dart';
 import 'package:locus/features/login/presentation/views/widgets/auth_text_field_widget.dart';
 import 'package:locus/features/login/presentation/views/widgets/auth_text_widget.dart';
 
-class WelcomeScreen extends StatelessWidget {
+// ignore: must_be_immutable
+class LoginScreen extends StatelessWidget {
   var formState = GlobalKey();
   TextEditingController passControll = TextEditingController();
   TextEditingController emailControll = TextEditingController();
+
+  LoginScreen({super.key});
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<WelcomeCubit, WelcomeState>(
@@ -128,7 +131,7 @@ class WelcomeScreen extends StatelessWidget {
                                       onPressed: () {
                                         navScreen(
                                             context: context,
-                                            NextScreen: GetStartedScreen());
+                                            NextScreen: SignUpScreen());
                                       },
                                       text: 'SignUp',
                                       color: const Color(0xff2D3380),
