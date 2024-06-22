@@ -74,7 +74,6 @@ class _MyPlanetScreenState extends State<MyPlanetScreen>
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-
             Text(
               '${_currentplanet.name}',
               style: const TextStyle(
@@ -102,7 +101,7 @@ class _MyPlanetScreenState extends State<MyPlanetScreen>
                     },
                     child: Image.asset(
                       planetlist[index % planetlist.length].image,
-                      scale: 4,
+                      scale: 6,
                     ),
                   );
                 },

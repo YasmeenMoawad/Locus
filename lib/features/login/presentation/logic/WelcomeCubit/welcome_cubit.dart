@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:locus/features/navbar/presentation/views/nav_bar.dart';
+import 'package:locus/features/planets/presentation/views/planet.dart';
 
 import '../../../data/Cache_Helper/CacheHelper.dart';
 import '../../../data/Dio/Dio_File.dart';
-import '../../views/widgets/MyPlanetScreen.dart';
 
 part 'welcome_state.dart';
 
@@ -41,7 +42,7 @@ class WelcomeCubit extends Cubit<WelcomeState> {
           context,
           MaterialPageRoute(
               builder: (context) =>
-                  const MyPlanetScreen()));
+                   NavBar()));
 
     }).catchError((error){
       emit(WelcomeError());

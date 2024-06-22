@@ -34,6 +34,7 @@ class _SplashScreenState extends State<SplashScreen> {
         children: [
           BackgroundImage(),
           AppNameTextWidget(),
+
         ],
       ),
     );
